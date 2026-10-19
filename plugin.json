@@ -11,7 +11,14 @@
   "homepage": "https://weddings.ondimi.com/connect-your-ai/chatgpt/",
   "repository": "https://github.com/ondimi/ondimi-weddings-chatgpt",
   "license": "MIT",
-  "keywords": ["wedding", "rsvp", "guest list", "wedding planning", "invitations", "event"],
+  "keywords": [
+    "wedding",
+    "rsvp",
+    "guest list",
+    "wedding planning",
+    "invitations",
+    "event"
+  ],
   "extensions": {
     "com.openai": {
       "onboardingSkill": "./skills/getting-started/SKILL.md",
@@ -21,7 +28,10 @@
         "longDescription": "onDimi Weddings connects ChatGPT to your wedding on onDimi, an AI guest concierge that texts, emails, calls and chats with every guest party for you.\n\nAsk how RSVPs are going and get exact numbers and names. Paste your guest list from a spreadsheet or a wedding-website export and ChatGPT imports it, fills in existing guests instead of duplicating them, and shows what changed. Start the RSVP or mailing-address campaign for the guests you choose; onDimi follows up on its own and stops when a guest answers. When something changes, like a new ceremony time or the shuttle schedule, ChatGPT drafts one update, shows you a sample, and sends it only to the guests you approve. Keep the details the concierge uses to answer guests current.\n\nYou stay in control. The connection sees only your wedding, reading never changes anything, and nothing reaches a guest until you approve it.\n\nNew to onDimi? Create your wedding in the sign-in window. It's free for up to 100 guest parties, AI concierge included, and it doesn't contact anyone until you're ready.",
         "developerName": "onDimi",
         "category": "Lifestyle",
-        "capabilities": ["Read", "Write"],
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
         "websiteURL": "https://weddings.ondimi.com",
         "supportURL": "https://weddings.ondimi.com/contact",
         "privacyPolicyURL": "https://weddings.ondimi.com/privacy-policy",
@@ -42,31 +52,31 @@
               "description": "Reports RSVP status",
               "prompt": "How are our RSVPs looking?",
               "tools_triggered": "wedding_profile, wedding_status_digest",
-              "expected_behavior": "Reports how many guest parties and people are attending, declined and haven't replied for the Chris & Macy Wedding (Reviewer), without changing anything."
+              "expected_behavior": "Connected to Chris & Macy Wedding (ChatGPT Reviewer). Reports 98 guests: 76 attending, 14 declined and 8 awaiting a response (90 of 98 responded), with the November 14 RSVP deadline. Changes nothing."
             },
             {
               "description": "Lists guests who declined",
               "prompt": "Who declined?",
               "tools_triggered": "wedding_profile, guest_list",
-              "expected_behavior": "Lists the names of the guest parties whose RSVP is Declined, with a count that matches the names listed. Changes nothing."
+              "expected_behavior": "Lists the 14 declined guests by party: Ivy Griffin; Owen and Kate Russell; Derek Bryant; Julian and Maria Rivera; Audrey and Miles Long; Gabriel and Tara Perry; Ethan and Molly Brooks; Noah and Grace Kim. Changes nothing."
             },
             {
               "description": "Adds a guest",
               "prompt": "Add a guest: Alex Rivera, phone 555-555-0199.",
               "tools_triggered": "wedding_profile, guests_add",
-              "expected_behavior": "Adds Alex Rivera as a new guest party with that phone number and confirms the guest was added. No message is sent to the guest."
+              "expected_behavior": "Adds Alex Rivera with phone 555-555-0199 as a new guest party and confirms it. No message is sent to the guest."
             },
             {
               "description": "Drafts a guest update without sending",
               "prompt": "Draft an update telling our attending guests the ceremony now starts at 4:30 PM, and show me a sample.",
               "tools_triggered": "wedding_profile, guest_update_draft",
-              "expected_behavior": "Shows a sample of the update as one guest would receive it and the intended audience, then asks for approval. Nothing is sent."
+              "expected_behavior": "Saves a draft and shows a one-guest sample, e.g. \"Hi Ryan, it's Chris & Macy here. The ceremony now starts at 4:30 PM. We look forward to celebrating with you! Reply STOP to opt out.\", and states that nothing has been sent. Sending requires a separate approval."
             },
             {
               "description": "Updates the information the concierge uses",
-              "prompt": "Add to our venue information: shuttles leave the Hilton lobby at 3:45 PM and return at 11 PM.",
+              "prompt": "Add to our venue information: shuttles leave the hotel lobby at 3:45 PM and return at 11 PM.",
               "tools_triggered": "wedding_profile, knowledge_list, knowledge_update",
-              "expected_behavior": "Finds the venue entry, shows the text before and after, and saves the shuttle times to it after the user agrees."
+              "expected_behavior": "Adds the shuttle times (leave the hotel lobby 3:45 PM, return 11 PM) to the wedding's venue information and confirms the update. Guests are not contacted."
             }
           ],
           "negative": [
