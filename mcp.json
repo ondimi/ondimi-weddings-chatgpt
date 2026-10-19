@@ -8,7 +8,7 @@
         "com.openai": {
           "auth": {
             "type": "oauth",
-            "client": { "mode": "cimd" },
+            "client": { "mode": "dcr" },
             "baseScopes": ["wedding"]
           }
         }
