@@ -1,0 +1,96 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ondimi-weddings",
+  "version": "1.0.0",
+  "description": "Run your wedding's guest communication from ChatGPT: import your guest list, collect RSVPs and mailing addresses, answer guest questions, and send updates you approve, through onDimi's AI guest concierge.",
+  "author": {
+    "name": "onDimi",
+    "email": "weddings@ondimi.com",
+    "url": "https://weddings.ondimi.com"
+  },
+  "homepage": "https://weddings.ondimi.com/connect-your-ai/chatgpt/",
+  "repository": "https://github.com/ondimi/ondimi-weddings-chatgpt",
+  "license": "MIT",
+  "keywords": ["wedding", "rsvp", "guest list", "wedding planning", "invitations", "event"],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/getting-started/SKILL.md",
+      "interface": {
+        "displayName": "onDimi Weddings",
+        "shortDescription": "Wedding RSVPs & guest updates",
+        "longDescription": "onDimi Weddings connects ChatGPT to your wedding on onDimi, an AI guest concierge that texts, emails, calls and chats with every guest party for you.\n\nAsk how RSVPs are going and get exact numbers and names. Paste your guest list from a spreadsheet or a wedding-website export and ChatGPT imports it, fills in existing guests instead of duplicating them, and shows what changed. Start the RSVP or mailing-address campaign for the guests you choose; onDimi follows up on its own and stops when a guest answers. When something changes, like a new ceremony time or the shuttle schedule, ChatGPT drafts one update, shows you a sample, and sends it only to the guests you approve. Keep the details the concierge uses to answer guests current.\n\nYou stay in control. The connection sees only your wedding, reading never changes anything, and nothing reaches a guest until you approve it.\n\nNew to onDimi? Create your wedding in the sign-in window. It's free for up to 100 guest parties, AI concierge included, and it doesn't contact anyone until you're ready.",
+        "developerName": "onDimi",
+        "category": "Lifestyle",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://weddings.ondimi.com",
+        "supportURL": "https://weddings.ondimi.com/contact",
+        "privacyPolicyURL": "https://weddings.ondimi.com/privacy-policy",
+        "termsOfServiceURL": "https://weddings.ondimi.com/terms-and-conditions",
+        "defaultPrompt": [
+          "How are our RSVPs looking?",
+          "Help us set up our wedding details.",
+          "Send an update to our guests."
+        ],
+        "brandColor": "#bd0057",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Reports RSVP status",
+              "prompt": "How are our RSVPs looking?",
+              "tools_triggered": "wedding_profile, wedding_status_digest",
+              "expected_behavior": "Reports how many guest parties and people are attending, declined and haven't replied for the Chris & Macy Wedding (Reviewer), without changing anything."
+            },
+            {
+              "description": "Lists guests who declined",
+              "prompt": "Who declined?",
+              "tools_triggered": "wedding_profile, guest_list",
+              "expected_behavior": "Lists the names of the guest parties whose RSVP is Declined, with a count that matches the names listed. Changes nothing."
+            },
+            {
+              "description": "Adds a guest",
+              "prompt": "Add a guest: Alex Rivera, phone 555-555-0199.",
+              "tools_triggered": "wedding_profile, guests_add",
+              "expected_behavior": "Adds Alex Rivera as a new guest party with that phone number and confirms the guest was added. No message is sent to the guest."
+            },
+            {
+              "description": "Drafts a guest update without sending",
+              "prompt": "Draft an update telling our attending guests the ceremony now starts at 4:30 PM, and show me a sample.",
+              "tools_triggered": "wedding_profile, guest_update_draft",
+              "expected_behavior": "Shows a sample of the update as one guest would receive it and the intended audience, then asks for approval. Nothing is sent."
+            },
+            {
+              "description": "Updates the information the concierge uses",
+              "prompt": "Add to our venue information: shuttles leave the Hilton lobby at 3:45 PM and return at 11 PM.",
+              "tools_triggered": "wedding_profile, knowledge_list, knowledge_update",
+              "expected_behavior": "Finds the venue entry, shows the text before and after, and saves the shuttle times to it after the user agrees."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated weather question",
+              "prompt": "What's the weather in Paris tomorrow?",
+              "expected_behavior": "onDimi is not used; the request has nothing to do with the user's wedding guests."
+            },
+            {
+              "description": "Unrelated coding task",
+              "prompt": "Write a Python function that reverses a string.",
+              "expected_behavior": "onDimi is not used; the request has nothing to do with the user's wedding guests."
+            },
+            {
+              "description": "Wedding-adjacent request outside onDimi's scope",
+              "prompt": "Book us a honeymoon flight to Cancun.",
+              "expected_behavior": "onDimi is not used: it manages guest communication, not travel booking."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "Initial release: the onDimi Weddings MCP server (guest list, RSVPs, addresses, guest updates and the wedding information the concierge uses) and seven wedding skills."
+      }
+    }
+  }
+}
