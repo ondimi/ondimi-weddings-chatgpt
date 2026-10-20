@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ondimi-weddings",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Run your wedding's guest communication from ChatGPT: import your guest list, collect RSVPs and mailing addresses, answer guest questions, and send updates you approve, through onDimi's AI guest concierge.",
   "author": {
     "name": "onDimi",
@@ -96,7 +96,10 @@
               "expected_behavior": "onDimi is not used: it manages guest communication, not travel booking."
             }
           ]
-        }
+        },
+        "demo_recording_url": "https://www.youtube.com/watch?v=ANCNOw0rjV8",
+        "commerce": false,
+        "commerce_description": "onDimi Weddings does not sell products or process payments in ChatGPT. The onDimi service itself is free for the reviewer account and for typical weddings."
       },
       "publication": {
         "release_notes": "Initial release: the onDimi Weddings MCP server (guest list, RSVPs, addresses, guest updates and the wedding information the concierge uses) and seven wedding skills."
