@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ondimi-weddings",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Run your wedding's guest communication from ChatGPT: import your guest list, collect RSVPs and mailing addresses, answer guest questions, and send updates you approve, through onDimi's AI guest concierge.",
   "author": {
     "name": "onDimi",
@@ -25,7 +25,7 @@
       "interface": {
         "displayName": "onDimi Weddings",
         "shortDescription": "Wedding RSVPs & guest updates",
-        "longDescription": "onDimi Weddings connects ChatGPT to your wedding on onDimi, an AI guest concierge that texts, emails, calls and chats with every guest party for you.\n\nAsk how RSVPs are going and get exact numbers and names. Paste your guest list from a spreadsheet or a wedding-website export and ChatGPT imports it, fills in existing guests instead of duplicating them, and shows what changed. Start the RSVP or mailing-address campaign for the guests you choose; onDimi follows up on its own and stops when a guest answers. When something changes, like a new ceremony time or the shuttle schedule, ChatGPT drafts one update, shows you a sample, and sends it only to the guests you approve. Keep the details the concierge uses to answer guests current.\n\nYou stay in control. The connection sees only your wedding, reading never changes anything, and nothing reaches a guest until you approve it.\n\nNew to onDimi? Create your wedding in the sign-in window. It doesn't contact anyone until you're ready.",
+        "longDescription": "onDimi Weddings connects ChatGPT to your wedding on onDimi, an AI guest concierge that texts, emails, calls and chats with every guest party for you. Every call it places or answers opens by saying who is speaking: \"it's onDimi, the AI guest concierge of <the couple>\". Guests are only the couple's own invited guests, in the US, and each channel follows the guest's recorded consent.\n\nAsk how RSVPs are going and get exact numbers and names. Paste your guest list from a spreadsheet or a wedding-website export and ChatGPT imports it, fills in existing guests instead of duplicating them, and shows what changed. Ask the guests you choose for their RSVP or mailing address; onDimi follows up on its own and stops when a guest answers. When something changes, like a new ceremony time or the shuttle schedule, ChatGPT drafts one update, shows you a sample, and sends it only to the guests you approve. Keep the details the concierge uses to answer guests current.\n\nYou stay in control. The connection sees only your wedding, reading never changes anything, and nothing reaches a guest until you approve it.\n\nNew to onDimi? Create your wedding in the sign-in window. It doesn't contact anyone until you're ready.",
         "developerName": "onDimi",
         "category": "Productivity",
         "capabilities": [

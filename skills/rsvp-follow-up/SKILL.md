@@ -1,9 +1,9 @@
 ---
-name: rsvp-campaign
+name: rsvp-follow-up
 description: Collect RSVPs or mailing addresses from wedding guests through onDimi's outreach plans. Use when the couple wants to send invitations or RSVP requests, chase guests who haven't replied, collect addresses, or follow up with non-responders.
 ---
 
-# Running the RSVP (or address) campaign
+# Collecting RSVPs and addresses
 
 RSVPs, mailing addresses and other details are collected by **plans**:
 scheduled sequences of texts, emails and calls with automatic follow-ups. An

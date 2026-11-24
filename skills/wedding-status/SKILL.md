@@ -12,9 +12,9 @@ description: Report how the wedding's guest communication is going. Use when the
    attending, declined, not yet answered (count guest parties and people as
    the digest does; say which you mean).
 3. Then what needs the couple, at most three items, each with an offer:
-   - parties still missing an address → offer the address campaign;
+   - parties still missing an address → offer the address plan;
    - unanswered after the plan ran out → offer another round
-     (`rsvp-campaign`);
+     (`rsvp-follow-up`);
    - milestones not set → offer to set the timeline;
    - guests with dietary, accessibility or seating notes → offer the list.
 4. Mention what's scheduled next ("12 reminders go out tomorrow").

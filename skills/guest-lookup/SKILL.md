@@ -26,7 +26,7 @@ null there are more: call again with `skip=next_skip` until it is null.
   are the people. "23 declined" should say whether that's parties or people,
   and the names should match that choice (for people, list each declined
   member, not just the party name).
-- For campaign totals, `wedding_status_digest` and `plan_preflight` hold the
+- For plan totals, `wedding_status_digest` and `plan_preflight` hold the
   verified numbers; use them rather than adding up lists.
 
 ## One guest

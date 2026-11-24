@@ -6,7 +6,7 @@ description: Send one announcement to many wedding guests through onDimi. Use wh
 # Sending a guest update
 
 An update carries one reason to many guests. It is not for collecting RSVPs
-or addresses; those go through the `rsvp-campaign` skill.
+or addresses; those go through the `rsvp-follow-up` skill.
 
 ## Before you start
 

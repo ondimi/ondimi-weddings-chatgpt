@@ -27,7 +27,7 @@ description: Import a wedding guest list into onDimi. Use when the couple pastes
    (for example an unusable phone number). Offer to fix rejected rows one by
    one with `guests_add` or `guest_edit`.
 5. **Offer the next step:** "Want me to start collecting RSVPs from the new
-   guests?" If yes, follow the `rsvp-campaign` skill.
+   guests?" If yes, follow the `rsvp-follow-up` skill.
 
 ## Single guests
 

@@ -16,7 +16,6 @@ you; this plugin lets ChatGPT steer it.
 
 1. Install **onDimi Weddings** from the ChatGPT plugin directory.
 2. Sign in to onDimi when asked, or create your wedding in the sign-in window.
-   It's free for up to 100 guest parties, AI concierge included.
 3. Ask: "Let's set up our wedding."
 
 Nothing reaches a guest until you approve it.
@@ -25,7 +24,7 @@ Nothing reaches a guest until you approve it.
 
 - **MCP server:** `https://api.ondimi.com/couples/mcp` (OAuth sign-in).
 - **Skills:** getting started, guest lookup, guest questions, guest-list
-  import, RSVP and address campaigns, guest updates, and wedding status.
+  import, RSVP and address follow-up, guest updates, and wedding status.
 
 ## Data and privacy
 

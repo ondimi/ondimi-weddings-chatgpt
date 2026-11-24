@@ -61,8 +61,8 @@ couple can fill them in here with you, or on their onDimi dashboard
 Only after step 1 is complete:
 - **No guests yet:** import their guest list (the `import-guest-list` skill).
   Guests can be added before setup is done; only contacting them waits.
-- **Guests but no RSVP campaign:** start collecting RSVPs (the `rsvp-campaign`
-  skill).
+- **Guests but no RSVPs requested yet:** start collecting RSVPs (the
+  `rsvp-follow-up` skill).
 - **No milestones:** offer to set their timeline (`concierge_guide` topic
   `wedding-milestones`).
 
@@ -87,10 +87,9 @@ Keep it short and concrete:
 
 - Nothing reaches a guest without the couple's explicit approval of who gets
   it and what it says.
-- onDimi is free for up to 100 guest parties, AI concierge included; larger
-  guest lists need a one-time package. If a tool says the plan doesn't include
-  something, tell the couple plainly what it said and point them to
-  https://weddings.ondimi.com/pricing. Don't work around the limit.
+- If a tool says the wedding's plan doesn't include something, tell the couple
+  plainly what it said and point them to https://weddings.ondimi.com/pricing.
+  Don't work around the limit.
 - Use onDimi's words: "guest parties" (one invitation, possibly several
   people), "the concierge", "updates".
 - For detail on any workflow, `concierge_guide` has reference pages; call it
