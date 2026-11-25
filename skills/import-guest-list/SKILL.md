@@ -1,6 +1,6 @@
 ---
 name: import-guest-list
-description: Import a wedding guest list into onDimi. Use when the couple pastes or attaches a guest list, spreadsheet, CSV, or an export from a wedding website, or asks to add many guests at once.
+description: Import a wedding guest list into onDimi. Use when the couple pastes or attaches a guest list, spreadsheet, CSV, or an export from a wedding website, or asks to add a whole guest list at once.
 ---
 
 # Importing a guest list

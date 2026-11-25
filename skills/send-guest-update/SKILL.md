@@ -1,12 +1,13 @@
 ---
 name: send-guest-update
-description: Send one announcement to many wedding guests through onDimi. Use when the couple wants to tell guests about a change or logistics, such as a new ceremony time, a venue change, shuttle times, weather, parking, or a welcome note.
+description: Send the couple's wedding guests an update the couple approves, through onDimi. Use when the couple wants to tell guests about a change or logistics, such as a new ceremony time, a venue change, shuttle times, weather, parking, or a welcome note.
 ---
 
 # Sending a guest update
 
-An update carries one reason to many guests. It is not for collecting RSVPs
-or addresses; those go through the `rsvp-follow-up` skill.
+An update is one note from the couple, by text message, to guests on their
+own guest list whose texts are on. It is not for collecting RSVPs or
+addresses; those go through the `rsvp-follow-up` skill.
 
 ## Before you start
 
@@ -46,4 +47,4 @@ first; the error lists exactly what is missing.
 
 - Send without the couple's approval of the exact sample and audience.
 - Pick the audience yourself from vague wording ("the people who need it").
-- Use an update to chase RSVPs or addresses.
+- Use an update to ask for RSVPs or addresses.

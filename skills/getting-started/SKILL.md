@@ -5,17 +5,22 @@ description: First steps with onDimi, including the wedding setup that must be d
 
 # Getting started with onDimi
 
-onDimi runs an AI guest concierge for one wedding. It texts, emails, calls and
-chats with each guest party to collect RSVPs, mailing addresses and other
-details, answers guest questions from the wedding's information, and sends the
-updates the couple approves. You help the couple steer it.
+onDimi manages one wedding's guest list and keeps its guests informed. The
+couple adds their own invited guests, and onDimi's AI guest concierge contacts
+only those guests: to collect RSVPs, mailing addresses and other details, to
+answer their questions from the wedding's information, and to deliver the
+updates the couple approves. Each guest is contacted only on the channels
+switched on for that guest (text, email or phone call); the couple confirmed at
+sign-up that their guests agreed to this, and a guest's STOP turns all of them
+off. Every call, including a voicemail, opens by announcing the caller: "it's onDimi, the AI guest concierge of <the couple>". You help
+the couple steer it.
 
 **Setup comes first.** onDimi refuses to contact any guest (plans and updates
 alike) until the wedding's account details and wedding details are complete.
 The wedding information (knowledge) isn't enforced, but without it the
-concierge can't answer guests' questions. Get both done before outreach. The
-couple can fill them in here with you, or on their onDimi dashboard
-(weddings.ondimi.com, under Account and Wedding details).
+concierge can't answer guests' questions. Get both done before any guest is
+contacted. The couple can fill them in here with you, or on their onDimi
+dashboard (weddings.ondimi.com, under Account and Wedding details).
 
 ## First conversation
 
@@ -26,7 +31,7 @@ couple can fill them in here with you, or on their onDimi dashboard
 3. Greet the couple by the wedding name, summarize in two or three sentences,
    then check setup (below) before offering anything that contacts guests.
 
-## Step 1: wedding and account details (required before outreach)
+## Step 1: wedding and account details (required before guests are contacted)
 
 1. Call `wedding_details` for the current values and `wedding_fields` for the
    full list of fields (with allowed values for fixed-choice fields).
@@ -56,7 +61,7 @@ couple can fill them in here with you, or on their onDimi dashboard
 3. Write each entry with `knowledge_update` (the `guest-questions` skill has
    the details) and confirm the wording with the couple first.
 
-## Step 3: guests and outreach
+## Step 3: guests, RSVPs and addresses
 
 Only after step 1 is complete:
 - **No guests yet:** import their guest list (the `import-guest-list` skill).
@@ -75,11 +80,11 @@ Go back to step 1 for exactly those, then try again.
 Keep it short and concrete:
 - Set up the wedding details and the information guests will ask about.
 - Import and tidy the guest list.
-- Collect RSVPs and mailing addresses by text, email, phone and chat, with
-  automatic follow-ups.
+- Ask the guests the couple chooses for their RSVP or mailing address, with a
+  few reminders that stop when the guest answers.
 - Answer guests' questions about the wedding.
-- Send one update to many guests (a time change, shuttle details), after the
-  couple approves the wording and the audience.
+- Send the couple's guests an update (a time change, shuttle details), after
+  the couple approves the wording and who gets it.
 - Report exact numbers any time: who's coming, who declined, who hasn't
   answered.
 
@@ -87,6 +92,9 @@ Keep it short and concrete:
 
 - Nothing reaches a guest without the couple's explicit approval of who gets
   it and what it says.
+- Only guests on the couple's own guest list can be contacted, and only on
+  the channels switched on for each guest. The tools that send take guest ids
+  from that list, never a phone number or an email address.
 - If a tool says the wedding's plan doesn't include something, tell the couple
   plainly what it said and point them to https://weddings.ondimi.com/pricing.
   Don't work around the limit.
